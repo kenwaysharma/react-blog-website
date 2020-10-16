@@ -1,0 +1,59 @@
+import React, { Component,useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
+import '../components/CSS/ArticleCard.css'
+import { Link, Redirect } from 'react-router-dom';
+const axios = require('axios').default;
+
+
+
+const ArticleCard=()=>{
+    const [posts,setPosts] = useState(
+    {postAll:[{}]}
+       ) 
+    
+    useEffect(()=>{
+         axios.get('http://localhost:2000/apiEndpoint/READ')
+            .then(res=>{
+                console.log('Rsponse',res)
+                setPosts({...posts, postAll: res.data})
+                console.log('Current state:', posts)
+               
+    
+    })
+    },[])
+     
+    
+    
+       console.log(posts)
+    
+    
+   
+        return(
+            <div className='cardContainer'>
+            {
+                posts.postAll.map((post)=>{
+                    const uniqueID=post._id
+                    console.log(uniqueID)
+                    return(
+                        <div key={uniqueID}>
+                            <div className='card'>
+                                <h3>{post.title}</h3>
+                                <hr />
+                                <h4>{post.body}</h4>
+                    
+                            </div>
+                        <Link to={`/blog/page/${post._id}`}>Open</Link>
+                        </div>
+                    )
+                })
+                }
+            
+            </div>
+        )
+
+    
+
+}
+
+
+export default ArticleCard

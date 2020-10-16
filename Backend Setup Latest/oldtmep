@@ -1,0 +1,63 @@
+import React, { Component } from 'react';
+import Cookies from 'js-cookie';
+import '../components/CSS/ArticleCard.css'
+import { Link, Redirect } from 'react-router-dom';
+const axios = require('axios').default;
+
+
+
+class ArticleCard extends Component{
+    state={
+        posts:[ ],
+
+    }
+    
+    async componentDidMount(){
+        await axios.get('http://localhost:2000/apiEndpoint/READ')
+            .then(res=>{
+                
+                this.setState({
+                    posts: res.data //User slice(10,20) for pagination
+                })
+    
+    })
+    }
+     
+    
+    render(){
+       
+        const {posts}=this.state
+        console.log(posts)
+        
+        const postList = posts.map(post=>{
+            const postID=post._id
+            return (
+            
+            <div className='card' key={postID}>
+                <h3>{post.title}</h3>
+                <hr/>
+                
+                <h4>{post.body}</h4>
+                <button>Open</button>
+                <Link to={`/blog/page/${postID}`}>Open</Link>
+                
+                
+            </div>
+            
+            )
+
+        
+        })
+        return(
+            <div className='cardContainer'>
+            
+            {postList>0?"NO":postList}
+            </div>
+        )
+
+    }
+
+}
+
+
+export default ArticleCard

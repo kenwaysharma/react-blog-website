@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(236, 217, 223);
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.ninetyPer{
+    display: flex;
+    width: 80%;
+    margin-top:20px;
+    height: 100%;
+    margin-bottom: 20px;
+    
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(240, 164, 173); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(121, 85, 99); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 167, 225); 
+  }

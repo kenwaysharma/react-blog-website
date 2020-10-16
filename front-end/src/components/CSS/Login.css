@@ -1,0 +1,52 @@
+
+
+
+
+.loginDiv{
+    display: flex;
+    background-color: aqua;
+    padding: 10px;
+    width: 400px;
+    height: 450px;
+    box-shadow: -14px -12px 0px -5px rgba(221, 181, 245);
+    background-color:rgb(236, 195, 223);
+    border-radius:13px ;
+}
+.loginDiv h1{
+    font-size: 30px;
+    color: rgb(242, 160, 139);
+    margin-bottom: 30px;
+    
+}
+.loginDiv input{
+    border: none;
+    width: 100%;
+    height: 30px;
+    border-radius:13px ;
+    padding:10px;
+    
+    background-color:rgb(169, 157, 192) ;
+    color: white;
+    font-size:20px;
+    
+}
+.loginDiv button{
+    border: none;
+    width: 100px;
+    height:40px;
+    background-color: rgb(247, 97, 114);    
+    border-radius: 13px;
+    color: white;
+    cursor: pointer;
+}
+.loginDiv label{
+    color: blueviolet;
+    font-size: 18px;
+}
+
+.fail{
+    color: red;
+    font-size: 20px;
+    
+    
+}

@@ -1,0 +1,38 @@
+.sidebar button{
+    border: 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color:rgb(240, 164, 173);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 13px;
+    
+}
+.sidebar button:hover{
+background-color: rgb(0, 167, 225);
+transition: background-color 1s;
+}
+
+.loginDetails{
+    margin-top:50px;
+    margin-bottom:50px;
+}
+.loginDetails h4{
+    font-size: 25px;
+}
+.loginDetails h5{
+    font-size: 15px;
+}
+.createBtn{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.link{
+    text-decoration: none;
+    
+}

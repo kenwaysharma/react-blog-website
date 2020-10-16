@@ -1,0 +1,60 @@
+.singlePostcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top:20px;
+    height: fit-content;
+    background-color: rgb(240, 164, 173);
+    
+    justify-content: center;
+    align-items: center;
+    
+
+    
+}
+
+.singlePost{
+max-width: 70%;
+
+padding: 5px;
+border-radius: 10px;
+}
+.comment{
+    background-color: rgb(240, 164, 173);
+    padding:6px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.comment h3{
+    padding:5px 3px 5px 3px;
+}
+.comment h4{
+
+    
+}
+.singlePost hr{
+    
+        min-width: 90%;
+        max-width: 90%;
+        height: 5px;
+        border: 0;
+        border-radius: 10px;
+        background-color: rgb(217, 229, 214);
+    
+}
+.postContainer{
+    display: flex;
+    width: 100%;
+    
+}
+.btnCom{
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    float: right;
+}
+
+
+
+

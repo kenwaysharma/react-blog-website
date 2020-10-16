@@ -1,0 +1,92 @@
+.container{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.flexit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+
+
+}
+.flexit input{
+    border: none;
+    width: 470px;
+    height: 30px;
+    border-radius:13px ;
+    padding:10px;
+    box-shadow: -14px -12px 0px -5px rgba(221, 181, 245);
+    background-color:rgb(236, 195, 223);
+    color: rgb(0, 167, 225);
+    font-size:20px;
+    
+}
+.inputField{
+    margin-bottom:20px ;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.flexit textarea{
+    border: none;
+    box-shadow: -14px -12px 0px -5px rgba(221, 181, 245);
+    width: 470px;
+    resize: vertical;
+    min-height: 300px;
+    border-radius:13px ;
+    padding: 10px;
+    font-size:20px;
+    background-color:rgb(236, 195, 223);
+    color: rgb(247, 97, 114);
+    
+}
+.bodyField{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:20px ;
+}
+
+
+.flexit select{
+    border: none;
+    width: 490px;
+    
+    height: fit-content;
+    border-radius:13px ;
+    background-color:rgb(236, 195, 223);
+    padding:10px;
+    box-shadow: -14px -12px 0px -5px rgba(221, 181, 245);
+}
+.selectField{
+    margin-bottom: 20px;
+}
+.flexit button{
+    border: none;
+    width: 100px;
+    height:40px;
+    background-color: rgb(247, 97, 114);    
+    border-radius: 13px;
+    color: white;
+}
+
+.flexit h1{
+    font-size: 50px;
+    color: rgb(242, 160, 139)
+}
+
+.err{
+    color: red;
+    font-size: 20px;
+    
+    
+}
+.success{
+    color: green;
+    font-size: 20px;
+}

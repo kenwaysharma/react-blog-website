@@ -1,0 +1,90 @@
+.card{
+    color: black;
+    margin:10px ;
+    max-width: 440px;
+    min-width: 440px;
+    max-height: 30%;
+    border: 0;
+    
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(236, 195, 223);
+    box-shadow: -14px -12px 0px -5px rgba(221, 181, 245);
+    max-height: 900px;
+    
+}
+.card .button{
+    display: flex;
+    border: 0;
+    background-color: rgb(237, 222, 164);
+    width: 80px;
+    height: 25px;
+    align-items: center;
+    margin: 20px;
+    color: white;
+    justify-content: center;
+    align-self: flex-end;
+    text-decoration: none;
+
+
+}
+
+
+.card h3{
+    color: rgb(0, 167, 225);
+}
+.card h4{
+    color: rgb(247, 97, 114);
+    overflow-y: auto;
+}
+.card h4,h3{
+    min-width:80% ;
+    padding: 10px 30px 10px 30px;
+}
+.card hr{
+    min-width: 90%;
+    max-width: 90%;
+    height: 5px;
+    border: 0;
+    border-radius: 10px;
+    background-color: rgb(217, 229, 214);
+}
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+    
+}
+
+
+
+.sideDetails{
+    display: flex;
+    min-width:80% ;
+    justify-content: space-between;
+    padding: 10px 30px 10px 30px;
+    align-items: center;
+}
+
+.sideDetails h5{
+ color: gray;   
+ font-size: 14px;
+ margin-block-start: 0;
+ margin-block-end: 0;
+ margin-inline-start: 0px;
+ margin-inline-end: 0px;
+ width: fit-content
+}
+.sideDetails label{
+    background-color: rgb(169, 157, 157);
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+.sideDetails label:hover{
+    background-color: rgb(221, 181, 245);
+    cursor: pointer;
+} 

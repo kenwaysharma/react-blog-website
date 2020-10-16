@@ -35,7 +35,8 @@ const ArticleCard=()=>{
 
                     <h3>{post.title}</h3>
                     <div className='sideDetails'>
-                    <h5>Posted by {(post.creater)?(post.creater.username):null}</h5>
+                        
+                    <h5> {(post.creater)?(post.creater.username):null} | {post.date}</h5>
                     <label>{post.category}</label>
                     </div>
                     <hr/>

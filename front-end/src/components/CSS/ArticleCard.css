@@ -33,9 +33,11 @@
 
 .card h3{
     color: rgb(0, 167, 225);
+    overflow-wrap: break-word;
 }
 .card h4{
     color: rgb(247, 97, 114);
+    overflow-wrap: break-word;
     overflow-y: auto;
 }
 .card h4,h3{

@@ -11,9 +11,11 @@ import Singup from './components/Pages/Signup'
 import Login from './components/Pages/Login'
 import Page from './components/Pages/Page'
 import AuthContextProvider from './contexts/AuthContext';
+import RecentContextProvider from './contexts/RecentContext';
 import Logout from './components/Pages/Logout.js';
 import Sidebar from './components/Sidebar';
 import '../src/components/CSS/Sidebar.css'
+
 class App extends React.Component{
   constructor(props){
   super(props);
@@ -32,6 +34,7 @@ render() {
     <div className="App">
     
       <Router>
+        <RecentContextProvider>
       <AuthContextProvider>
         <Navbar />
         
@@ -57,6 +60,7 @@ render() {
             <Sidebar />
           </div>
         </AuthContextProvider>
+        </RecentContextProvider>
       </Router>
       
       

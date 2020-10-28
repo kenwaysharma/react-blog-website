@@ -20,38 +20,54 @@ router.get('/USERS', (req,res)=>{
       if (err) {
           console.log(err);
       }else{
+        
+       
           res.send(user)
           }
         }
-      ).populate('comments posts')
+      ).populate('comments') .populate('posts')
 
     })
 
 
 router.get('/READ', (req,res)=>{
-  posts.find({}, function (err, post) {
+  posts.find({},null,{sort:{
+      createdAt: -1 //Sort by Date Added DESC
+  }})
+  .populate('creater')
+  .exec(function (err, post) {
     if (err) {
       console.log(err);
   }else{
     
       res.json({post})
       }
-        }
-      )
-      .populate([{path:'creater'}, {path:'comments', select:'creater'}])
+        })
+  
       
     })
   router.get('/singlePost/:id',  (req,res)=>{
     const query = req.params.id
     console.log('query',query)
-     posts.findById(query,function(err,post){
+     posts.findById(query)
+     .populate({
+      path: 'comments',
+      populate: {
+          path: 'creater',
+          model: 'user'
+      }
+      
+   }).populate({
+    path:'creater'
+  })
+    .exec(function (err,post){
       if (err) {
         console.log(err);
-    }else{
-        res.send(post)
-        }
-    }).populate([{path:'creater'}, {path:'comments'}])
-  })
+      }else{
+          res.json({post})
+      }
+    })
+    })
 
 
 router.post('/CREATE',requireAuth, async (req, res) => {

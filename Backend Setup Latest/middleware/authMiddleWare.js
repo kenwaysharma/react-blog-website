@@ -20,7 +20,7 @@ const requireAuth = async (req,res,next)=>{
             }
         })
     }else{
-        res.send('JWT authentication failed')
+        res.json({msg:'JWT authentication failed'})
     }
 
 

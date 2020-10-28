@@ -17,19 +17,24 @@
 .card .button{
     display: flex;
     border: 0;
-    background-color: rgb(237, 222, 164);
+    background-color: rgb(169, 157, 192);
     width: 80px;
     height: 25px;
     align-items: center;
     margin: 20px;
+    border-radius: 5px;
     color: white;
+    
     justify-content: center;
     align-self: flex-end;
     text-decoration: none;
 
 
 }
-
+.card .button:hover{
+    background-color: rgb(221, 181, 245);
+    
+} 
 
 .card h3{
     color: rgb(0, 167, 225);
@@ -43,6 +48,9 @@
 .card h4,h3{
     min-width:80% ;
     padding: 10px 30px 10px 30px;
+
+    
+   
 }
 .card hr{
     min-width: 90%;
@@ -88,5 +96,5 @@
 }
 .sideDetails label:hover{
     background-color: rgb(221, 181, 245);
-    cursor: pointer;
+    
 } 

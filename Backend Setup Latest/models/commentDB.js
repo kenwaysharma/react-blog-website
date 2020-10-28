@@ -7,8 +7,11 @@ var CommentSchema = new mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: "user"
   },
-    body: String
-  });
+    body: {
+      type:String,
+      required:true
+    }
+  },{timestamps : true});
   
   // This creates our model from the above schema, using mongoose's model method
   var Comment = mongoose.model("comment", CommentSchema);

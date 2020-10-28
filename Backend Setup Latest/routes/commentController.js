@@ -27,11 +27,11 @@ router.post('/:id',requireAuth, async(req, res) => {
   if(token){
     jwt.verify(token,'this is my secret', async (err,decodedToken)=>{
   
-            console.log(decodedToken)
+            
             let user=await User.findById(decodedToken.id);
-            console.log("USER",user)
+            
             var userCreater = user 
-            console.log("userC:",userCreater)
+            
   
             //res.locals.user=user //LEARN THIS
             console.log("[ CREATE POST ]This is 2. Token authentication success")
@@ -43,12 +43,50 @@ router.post('/:id',requireAuth, async(req, res) => {
             nComment.save()
             let query={_id: req.params.id}
             console.log(query)
-            postDB.findOneAndUpdate(query,{$push:{comments:nComment}}, (err,updated)=>{
-            if (err) {
-              console.log("Something wrong when updating data!");
-            }else{
-            res.send(updated.populate('comments'))}
-          })
+            
+            User.findByIdAndUpdate(decodedToken.id,{$push:{comments:nComment}})
+            
+            .exec(function(err, user){
+              if (err) {
+                console.log("Something wrong when updating data! USER", err);
+              }else{
+                console.group('SUCCESS USER POST',user )
+                postDB.findByIdAndUpdate(query,{$push:{comments:nComment}})
+                  .exec(function(err,post){
+                    if (err) {
+                      console.log("Something wrong when updating data! POST ERROR", err);
+                      res.json({err})
+                    }else{
+                      console.log('This is the updated Post', post)
+                      res.send(nComment)
+                    }
+                  })
+                  
+              }})
+                  
+      
+            
+            
+            
+            
+            
+           
+            
+          //  postDB.findOneAndUpdate(query,{$push:{comments:nComment}}, (err,updated)=>{
+          //  if (err) {
+          //    console.log("Something wrong when updating data!");
+          //  }else{
+          //    User.findByIdAndUpdate(decodedToken,{$push:{comments:nComment}},(err, updatedUser)=>{
+          //      if (err) {
+          //        console.log("Something wrong when updating data! STAR", err);
+          //      }else{
+          //        console.log('This is the updated User', updatedUser)
+          //        res.send(nComment)
+          //      }
+          //      }
+          //    )}
+          //  
+          //})
 
 
 

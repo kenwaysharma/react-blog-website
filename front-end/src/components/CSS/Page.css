@@ -4,10 +4,11 @@
     width: 80%;
     margin-top:20px;
     height: fit-content;
-    background-color: rgb(240, 164, 173);
+    
     
     justify-content: center;
     align-items: center;
+
     
 
     
@@ -15,22 +16,51 @@
 
 .singlePost{
 max-width: 70%;
-
-padding: 5px;
+min-width: 60%;
+background-color:rgb(236, 195, 223);
+padding: 20px;
+box-shadow: -14px -12px 0px -5px rgba(221, 181, 245);
 border-radius: 10px;
+
+}
+.singlePost h1{
+    color: rgb(0, 167, 225);
+}
+.singlePost p{
+    color: rgb(247, 97, 114);
 }
 .comment{
-    background-color: rgb(240, 164, 173);
+   
     padding:6px;
-    border-radius: 10px;
+    margin: 3px;
     display: flex;
     flex-direction: column;
+    background-color: rgb(236, 217, 223);
+    color: black;
+    overflow-wrap: break-word;
+    
 }
-.comment h3{
-    padding:5px 3px 5px 3px;
-}
-.comment h4{
 
+.comment h3{
+    
+        
+        font-size: 15px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        font-weight: normal;
+    
+    
+}
+.comment h6{
+    
+    font-size: 10px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: normal;
     
 }
 .singlePost hr{
@@ -56,5 +86,25 @@ border-radius: 10px;
 }
 
 
+.commentFlex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+}
 
+.commentFlex input{
+    border: none;
+    padding: 0px;
+    height: 25px;
+    width: 80%;
+}
+.commentFlex button{
+    height: 25px;
+    border: none;
+    padding: 0;
+    background-color: aqua;
+    width: 20%;
+}
 

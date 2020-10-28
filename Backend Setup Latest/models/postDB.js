@@ -12,10 +12,7 @@ var postSchema = new mongoose.Schema({
             type:String,
             required:true
         },
-        date:{
-            type: Date,
-            default: Date.now()
-          },
+        
 
       comments:[{
           type: mongoose.Schema.Types.ObjectId,
@@ -25,12 +22,12 @@ var postSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-
       creater: {
           type: mongoose.Schema.Types.ObjectId,
           ref: "user"
       }
-  }
+      
+  },{timestamps : true}
  
 
 )

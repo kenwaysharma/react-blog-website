@@ -15,8 +15,23 @@
 .blog-grid{
     display: flex;
     width: 100%;
+    flex-direction: column;
 }
-
+.mainFlex{
+    display: flex;
+    
+    justify-content: center;
+    margin: 20px;
+    
+}
+.search{
+    border: 0.5px solid rgb(221, 181, 245);
+    background-color: rgb(236, 195, 223);
+    width: 400px;
+    border-radius: 8px;
+    padding: 6px;
+    height: 30px;
+}
 
 
 .tenPer{
@@ -31,4 +46,12 @@
     left: 80%;
 }
 
+
+.showYes{
+display: none;
+}
+
+.dont{
+    display:''
+}
 

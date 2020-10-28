@@ -21,16 +21,16 @@ var userSchema = new mongoose.Schema({
         required: [true, "Password is required!"],
         minlength: [6, "Enter atleast 6 characters!"],
     },
-    joined: {
-        type: Date,
-        default: Date.now()
-    },
+    comments:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "comment"
+    }],
 
     posts:[{
         type: mongoose.Schema.Types.ObjectId,
           ref: "postData"
     }],
-  });
+  },{timestamps : true});
   
   //NEW THINGS
 

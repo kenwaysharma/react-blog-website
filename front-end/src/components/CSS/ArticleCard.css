@@ -98,3 +98,27 @@
     background-color: rgb(221, 181, 245);
     
 } 
+
+@media only screen and (max-width: 600px){
+    .card{
+        min-width:255px;
+        margin-left: 0;
+        margin-right: 0%;
+    }
+    .cardContainer{
+        margin-bottom: 30px;
+    }
+    .card h3{
+        font-size: 16px;
+    }
+    .card h4{
+        font-size: 14px;
+    }
+    .card h4,h3{
+        min-width:80% ;
+        padding: 10px 30px 10px 30px;
+    
+        
+       
+    }
+}

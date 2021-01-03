@@ -7,6 +7,9 @@
   align-items: center;
   background-color: none;
   width: 80%;
+  height: fit-content;
+  align-items: center;
+  margin: 40px 0px 40px 0px;
 }
 
 .navbar ul{
@@ -78,4 +81,59 @@ display: flex;
 
 .otherBtn .active li{
   background-color:rgb(247, 97, 114) ;
+}
+
+
+.toggleBtn{
+  display: none;
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  border: none;
+  width: 60px;
+  word-wrap: break-word;
+  height: fit-content;
+  background-color: peru;
+  color: white;
+}
+
+@media only screen and (max-width:600px){
+  .navbar li{
+    margin: 5px;
+    
+    font-size: 14px;
+    
+    
+}
+}
+
+@media only screen and (max-width: 992px){
+  .navbar{
+
+    overflow: hidden;
+    z-index: 1;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0px;
+  color: white;
+  }
+  
+.otherBtn{
+  display: flex;
+  align-items: center;
+  
+  
+}
+  .navbar li{
+    color: white;
+  }
+  .loginBtn{
+    display: none;
+  }
+  .toggleBtn{
+    display: block;
+  }
+  
 }

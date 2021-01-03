@@ -90,3 +90,13 @@
     color: green;
     font-size: 20px;
 }
+
+@media only screen and (max-width: 600px){
+    
+    .Container{
+        
+        min-width: 255px;
+      
+    }
+    
+}

@@ -4,7 +4,7 @@ import Blog from './components/Pages/Blog'
 import Navbar from './components/Navbar.js';
 
 import {BrowserRouter as Router, Route, Switch, withRouter, Link} from 'react-router-dom'
-import Home from './components/Pages/Home'
+import Home from './components/Pages/Home.jsx'
 import About from './components/Pages/About'
 import Contact from './components/Pages/Contact'
 import Singup from './components/Pages/Signup'
@@ -56,7 +56,7 @@ render() {
           
           
         </Switch>
-        <div className='tenPer'>
+        <div className='tenPer scale-in-hor-right show'>
             <Sidebar />
           </div>
         </AuthContextProvider>

@@ -1,0 +1,207 @@
+.intro img{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.recentCard{
+    background-color: #0e51b0;
+    margin: 2px;
+    min-width: 300px;
+    max-width: 400px;
+    height: fit-content;
+    max-height: 600px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 3px;
+    padding: 10px;
+    position: relative;
+
+
+}
+
+.recentPosts .recentCard:hover{
+    
+    background-color: rgb(169, 157, 192);
+    transition: all 1s ease;
+    
+}
+
+.recentCard h3{
+    
+        display: block;
+        
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        font-weight: normal;
+        
+        color: rgb(247, 97, 114);
+       
+        padding: 0px;
+    
+    
+}
+
+.recentCard p{
+    color: pink;
+    
+}
+.recentPosts{
+    justify-content: center;
+    display: flex;
+    
+}
+.allRecent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.allRecent button{
+    width: 200px;
+    height: 40px;
+    border: 1px solid red ;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.allRecent button:hover{
+    width: 300px;
+    background-color: rgb(0, 167, 225);
+    transition: all 1s;
+}
+
+.allRecent h1{
+    font-size: 40px;
+    color: rgb(247, 97, 114);
+}
+
+.startPos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.startPos h1{
+    color:rgb(247, 97, 114);
+}
+.buttons{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(240, 164, 173);
+    align-items: center;
+}
+.buttons button{
+    margin: 5px;
+    height: 250px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #0e51b0;
+    color: white;
+    border-radius: 30px 30px 10px 30px;
+    border: none;
+    box-shadow: 22px 21px 46px -15px rgba(158,74,158,1);
+}
+
+.buttons button:hover{
+width: 250px;
+height: 300px;
+background-color: rgb(247, 97, 114);
+transition: all 0.2s linear;
+border-color: white;
+color: white;
+font-size: 28px;
+
+}
+
+
+
+
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 600px) {
+
+
+.recentCard p{
+    font-size: 13px;
+    
+}
+.allRecent h1, .startPos h1{
+    font-size: 20px;
+}
+
+}
+  
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .example {background: blue;}
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (max-width: 992px) {
+    
+    .recentPosts{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .homeDiv{
+        width: 100%;
+    }
+    .recentPosts{
+        display: flex;
+        align-items: center;
+        max-width: 50%;
+    }
+    .recentCard{
+        max-width: 50%;
+        min-width: 250px;
+        word-wrap: break-word;
+    }
+    .recentCard h3{    
+        font-size: 15px;
+
+}
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .buttons button{
+        display: flex;
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        font-size:13px;
+        align-items: center;
+        justify-content: center;
+    }
+    .buttons{
+        margin-bottom: 40px;
+    }
+    
+    .buttons button:hover{
+        width: 120px;
+        height: 55px;
+        background-color: rgb(247, 97, 114);
+        transition: all 0.2s linear;
+      
+        
+        }
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (max-width: 1200px) {
+  .recentPosts{
+      display: flex;
+      flex-direction: column;
+  }
+  }

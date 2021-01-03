@@ -1,6 +1,7 @@
 import React ,{useState, useContext}from 'react';
 import {useHistory,Redirect, Link} from 'react-router-dom'
 import { AuthContext } from '../contexts/AuthContext';
+import hideORshow from '../components/hideORshow'
 import '../components/CSS/Sidebar.css'
 import {ReactComponent as ReactIcon} from '../components/CSS/vector/default-monochrome.svg';
 
@@ -18,6 +19,7 @@ const Sidebar =()=>{
 
     return(
         <div className='sidebar'>
+            <button className='toggleBtn2' onClick={hideORshow}>X</button>
             <div className='loginDetails'>
                 {console.log('userobj 2', userOBJ)}
             {userOBJ!=null?(<h4>hello {userOBJ.username}</h4>):(<h4>You are not logged in</h4>)}
@@ -31,7 +33,7 @@ const Sidebar =()=>{
             <div className='links'>
             <ul>
             
-            <Link exact to='/' className='footerList' ><li>Home</li></Link>
+            <Link to='/' className='footerList' ><li>Home</li></Link>
             <Link to='/blog' className='footerList' ><li>Blog</li></Link>
             <Link to='/about' className='footerList'><li>About</li></Link>
             <Link to='/contact' className='footerList'><li>Contact</li></Link>

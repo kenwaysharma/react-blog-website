@@ -108,3 +108,46 @@ border-radius: 10px;
     width: 20%;
 }
 
+
+@media only screen and (max-width: 600px){
+    .singlePostcontainer{
+       
+        width: 100%;
+
+    }
+    
+.singlePost h1{
+    
+    font-size: 16px;
+}
+.singlePost p{
+    font-size: 14px;
+}
+
+
+.comment h3{
+    
+        
+        font-size: 13px;
+        
+    
+    
+}
+.comment h6{
+    
+    font-size: 10px;
+    
+    
+}
+
+}
+
+
+
+
+
+@media only screen and (max-width: 992px){
+    .singlePostcontainer{
+        margin-bottom: 70px;
+    }
+}

@@ -34,17 +34,6 @@
 }
 
 
-.tenPer{
-    min-width: 20%;
-    display: flex;
-    height: 100%;
-    background-color: rgb(247, 97, 114);
-    justify-content: center;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 80%;
-}
 
 
 .showYes{

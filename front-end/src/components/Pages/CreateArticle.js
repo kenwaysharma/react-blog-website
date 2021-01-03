@@ -33,7 +33,7 @@ const CreateArticle=()=>{
                 setData({...data,title:'', body:'',category:''})
                 setResponse({...response, title:'', body:'',category:'',success: "Post Sucessfully Added"})
                 
-            }else if(res.data==='JWT authentication failed'){
+            }else if(res.data.msg==='JWT authentication failed'){
                 setResponse({...response, title:'', body:'',category:'',fail: "You need to login before creating a new post"})
             }else{
                 console.log('Erorr', res)

@@ -2,7 +2,7 @@ import React, { Component,useState,useContext, useEffect, lazy } from 'react';
 import Cookies from 'js-cookie';
 import '../components/CSS/ArticleCard.css'
 import { Link, Redirect } from 'react-router-dom';
-import { RecentContext } from '../contexts/RecentContext';
+
 const axios = require('axios').default;
 
 
@@ -11,14 +11,14 @@ const ArticleCard=()=>{
     const [posts,setPosts] = useState(
     {postAll:[{}]}
        ) 
-    const {postsRecent, dispatcher} = useContext(RecentContext)
+    
     
     useEffect(()=>{
          axios.get('http://localhost:2000/apiEndpoint/READ')
             .then(res=>{
                 
                 setPosts({...posts, postAll: res.data.post})
-                dispatcher({ payload: res.data.post.slice(0,3)});
+                
                
     
     })
@@ -61,7 +61,7 @@ const ArticleCard=()=>{
             
             {articles>0?"NO":articles}
                 
-            {console.log(postsRecent.postR)}
+           
             </div>
         )
 
